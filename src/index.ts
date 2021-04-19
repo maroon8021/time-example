@@ -10,11 +10,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/products", async (req, res) => {
+  await createConnection();
   const products = await Index.getProducts();
   res.send(products);
 });
 
 app.listen(port, async () => {
-  await createConnection();
   console.log(`Example app listening at http://localhost:${port}`);
 });

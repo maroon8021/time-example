@@ -11,7 +11,7 @@ services:
       - DEBUG=*
       - PORT=8080
       - DB_URL=postgresql://superuser:superuserpass@database:5432/db-sample
-    command: "npm run start:dev"
+    command: "yarn start:dev"
     #command: 'bash -c "/app/scripts/wait-for-it.sh database:5432 --timeout=60 -- npm run start:dev"'
     # wait-for-it.shが `bash: /app/scripts/wait-for-it.sh: Permission denied` でコケるの一旦やめておく
     restart: always
