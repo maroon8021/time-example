@@ -14,6 +14,11 @@ app.get("/products", async (req, res) => {
   res.send(products);
 });
 
+app.get("/products-with-time", async (req, res) => {
+  const products = await Index.getProductsWithTime();
+  res.send(products);
+});
+
 app.listen(port, async () => {
   await createConnection();
   console.log(`Example app listening at http://localhost:${port}`);
