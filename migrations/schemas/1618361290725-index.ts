@@ -10,11 +10,13 @@ export class index1618361290725 implements MigrationInterface {
             name: "id",
             type: "int",
             isPrimary: true,
+            isGenerated: true,
+            generationStrategy: "increment"
           },
           {
             name: "code",
             type: "varchar",
-            isUnique: true,
+            //isUnique: true,
           },
           {
             name: "name",

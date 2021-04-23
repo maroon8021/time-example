@@ -9,6 +9,7 @@
     "up": "docker-compose up",
     "down": "docker-compose down",
     "setup": "DB_URL=postgresql://superuser:superuserpass@localhost:57001/db-sample DB_MIGRATION=true ts-node $(npm bin)/typeorm migration:run",
+    "drop": "DB_URL=postgresql://superuser:superuserpass@localhost:57001/db-sample DB_MIGRATION=true ts-node $(npm bin)/typeorm schema:drop",
     "start:dev": "tsc-watch --onSuccess 'nodemon ./dist/index.js'"
   },
   "devDependencies": {

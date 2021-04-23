@@ -1,4 +1,4 @@
-import { Entity, CreateDateColumn, Column, PrimaryColumn } from "typeorm";
+import { Entity, CreateDateColumn, Column, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 
 export type PlainProduct = {
   id?: number;
@@ -10,7 +10,8 @@ export type PlainProduct = {
 
 @Entity({ name: "Product" })
 export class Product {
-  @PrimaryColumn()
+  //@PrimaryColumn()
+  @PrimaryGeneratedColumn()
   readonly id!: number;
 
   @Column({ name: "code" })
